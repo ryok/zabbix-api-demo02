@@ -58,7 +58,7 @@ function authAPI() {
 
   authid = null;
   getAPIResponse(
-    'user.log',
+    'user.login',
     {"user":user, "password":password},
     false,
     function(result){
