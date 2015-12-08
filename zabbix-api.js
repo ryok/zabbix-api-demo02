@@ -14,7 +14,7 @@ function getValues(arr, key){
 }
 
 function callAPI(method, params, async, success, error) {
-  var url  = 'http://192.168.1.10/zabbix/api_jsonrpc.php'; //環境に合わせる
+  var url  = 'http://ryok-centos.cloudapp.net/zabbix/api_jsonrpc.php'; //環境に合わせる
 
   var sendData = {
     jsonrpc: '2.0',
@@ -53,7 +53,7 @@ function getAPIResponse(method, params, async, callback){
 }
 
 function authAPI() {
-  var user     = 'admin';    //adminとか絶対やめましょうね！！！
+  var user     = 'Admin';    //adminとか絶対やめましょうね！！！
   var password = 'zabbix';   //
 
   authid = null;
