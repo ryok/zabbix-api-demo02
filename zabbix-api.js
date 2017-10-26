@@ -1,7 +1,6 @@
 var authid;
 
 //表示するグラフ
-//typeはitemのvalue_typeに合わせる。0:float,3:???
 var graphs = [
   {label:'LA5'      , filter:{key_:'system.cpu.load[,avg5]'},    type:0},
   {label:'Mem Avail', filter:{key_:'vm.memory.size[available]'}, type:3},
@@ -14,7 +13,7 @@ function getValues(arr, key){
 }
 
 function callAPI(method, params, async, success, error) {
-  var url  = 'http://ryok-centos.cloudapp.net/zabbix/api_jsonrpc.php'; //環境に合わせる
+  var url  = 'http://xxx-centos.cloudapp.net/zabbix/api_jsonrpc.php'; //環境に合わせる
 
   var sendData = {
     jsonrpc: '2.0',
@@ -53,8 +52,8 @@ function getAPIResponse(method, params, async, callback){
 }
 
 function authAPI() {
-  var user     = 'Admin';    //adminとか絶対やめましょうね！！！
-  var password = 'zabbix';   //
+  var user     = 'Admin';    // user name
+  var password = 'zabbix';   // passoword
 
   authid = null;
   getAPIResponse(
